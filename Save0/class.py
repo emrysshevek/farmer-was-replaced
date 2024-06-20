@@ -56,7 +56,7 @@ def new(child_class):
 				
 			while len(class["inherits"]) > 0:
 				parent_class = class["inherits"].pop()()
-				inherit = inflate_obj(parent_class, {}, obj)
+				inherit = inflate_obj(parent_class, obj, obj)
 				for elem in inherit:
 					obj[elem] = inherit[elem]
 					
